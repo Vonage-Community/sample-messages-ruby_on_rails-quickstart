@@ -1,0 +1,2 @@
+module SmsDeliveryReceiptsHelper
+end
