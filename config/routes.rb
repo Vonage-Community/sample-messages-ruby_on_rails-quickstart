@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # SMS routes
   resources :outbound_sms, only: [:index, :create]
   resources :sms_delivery_receipts, only: [:create]

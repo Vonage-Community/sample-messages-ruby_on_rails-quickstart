@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: MyString
+  from: MyString
+  text: MyText
+  uuid: MyString
+  status: MyString
+  is_inbound: false
+  conversation_uuid: MyString
+
+two:
+  to: MyString
+  from: MyString
+  text: MyText
+  uuid: MyString
+  status: MyString
+  is_inbound: false
+  conversation_uuid: MyString

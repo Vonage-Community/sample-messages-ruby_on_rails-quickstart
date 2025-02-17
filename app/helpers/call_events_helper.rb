@@ -1,0 +1,2 @@
+module CallEventsHelper
+end

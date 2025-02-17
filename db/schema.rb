@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_17_115734) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_17_135132) do
+  create_table "calls", force: :cascade do |t|
+    t.string "to"
+    t.string "from"
+    t.text "text"
+    t.string "uuid"
+    t.string "status"
+    t.boolean "is_inbound"
+    t.string "conversation_uuid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

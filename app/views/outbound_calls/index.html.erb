@@ -1,0 +1,24 @@
+<div class="calls-form">
+  <h1>Make a Call</h1>
+
+  <%= form_with model: @call, url: outbound_calls_path, local: true do |f| %>
+    <div class="field">
+      <%= f.label :from, "Your phone number to make the call from" %>
+      <%= f.text_field :from, placeholder: '+12223334555' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to, "Recipient's phone number" %>
+      <%= f.text_field :to, placeholder: '+12223334555' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :text, "Voice message" %>
+      <%= f.text_area :text %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Call" %>
+    </div>
+  <% end %>
+</div>
