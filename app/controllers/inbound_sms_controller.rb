@@ -1,19 +1,16 @@
 class InboundSmsController < ApplicationController
-  require 'vonage'
   # We disable CSRF for this webhook call
   skip_before_action :verify_authenticity_token
 
   # Stores an inbound SMS when a webhook
   # from Vonage is received
   def create
-    # Creates a new SMS record in
-    # the database
+
     sms = Sms.create(
       to: params[:to],
       from: params[:from],
       text: params[:text],
       message_uuid: params[:message_uuid],
-      # Seperate inbound SMS from outbound ones
       is_inbound: true
     )
 
@@ -49,7 +46,10 @@ class InboundSmsController < ApplicationController
   # Uses the Vonage API to send a quick reply to the SMS received
   # for simplicity we're not storing this one in the database
   def reply sms
-    message = Vonage::Messaging::Message.sms(message: sms.text.reverse)
+    consonants = sms.text.delete("aeiouAEIOU")
+    binaray = sms.text.to_s(2)
+
+    message = Vonage::Messaging::Message.sms(message: "Your message with vowels is #{consonants} and your message in binary is #{binaray}")
 
     vonage.messaging.send(
       from: sms.to,

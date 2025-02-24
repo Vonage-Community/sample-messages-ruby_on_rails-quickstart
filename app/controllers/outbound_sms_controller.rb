@@ -1,7 +1,5 @@
 class OutboundSmsController < ApplicationController
-  require 'vonage'
 
-  # Shows the UI for sending an SMS
   def index
     @sms = Sms.new
   end
@@ -22,6 +20,12 @@ class OutboundSmsController < ApplicationController
 
   private
 
+  # Determines the params that can be
+  # stored in the database safely
+  def safe_params
+    params.require(:sms).permit(:to, :from, :text)
+  end
+
   # Initializes the Vonage API client
   def vonage
     # Initialize the Vonage client with API credentials and token
@@ -41,11 +45,6 @@ class OutboundSmsController < ApplicationController
     Vonage::JWT.generate(claims)
   end
 
-  # Determines the params that can be
-  # stored in the database safely
-  def safe_params
-    params.require(:sms).permit(:to, :from, :text)
-  end
 
   # Uses the Vonage API to send the stored
   # SMS message
@@ -58,8 +57,9 @@ class OutboundSmsController < ApplicationController
       **message
     )
 
-    # If sending the SMS was a success (HTTP 202)
-    # then store the message UUID on the SMS record
+    puts "Logging Vonage response..."
+    puts "Vonage response: #{response.http_response.code}"
+
     if response.http_response.code == '202'
       sms.update(
         message_uuid: response.entity.attributes[:message_uuid]

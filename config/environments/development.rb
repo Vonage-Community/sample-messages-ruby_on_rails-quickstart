@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Add ngrok to the list of allowed hosts.
-  config.hosts << "0d57a829f080.ngrok.app"
+  config.hosts << ENV["VONAGE_SERVER_HOSTNAME"]
 
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true

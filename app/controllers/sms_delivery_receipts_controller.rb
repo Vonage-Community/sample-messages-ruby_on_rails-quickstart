@@ -7,8 +7,8 @@ class SmsDeliveryReceiptsController < ApplicationController
   def create
     # Find the SMS for the Message ID, and update it with the
     # status, only if the Message ID was provided
-    Sms.where(message_uuid: params[:message_uuid])
-       .update_all(status: params[:status]) if params[:message_uuid]
+    Sms.where(message_uuid: params[:sms_delivery_receipt][:message_uuid])
+       .update_all(status: params[:sms_delivery_receipt][:status]) if params[:sms_delivery_receipt][:message_uuid]
 
     # Return an empty HTTP 200 status
     head :ok

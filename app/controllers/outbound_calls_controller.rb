@@ -86,9 +86,10 @@ class OutboundCallsController < ApplicationController
       # the voice message specified
       answer_url: [
         # Using ngrok URL to make the endpoint publicly accessible
-        "#{ENV['VONAGE_SERVER_HOSTNAME']}/outbound_calls/#{call.id}"
+        "https://#{ENV['VONAGE_SERVER_HOSTNAME']}/outbound_calls/#{call.id}"
       ]
     }
+    # Create the call
     response = vonage.voice.create(options)
 
     # If the call was successfully started,

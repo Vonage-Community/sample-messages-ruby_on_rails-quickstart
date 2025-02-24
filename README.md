@@ -1,24 +1,50 @@
-# README
+# Vonage APIs Quickstart Examples for Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of the quickstart guide is to provide simple examples focused on one goal. For example, sending an SMS, making a Text to Speech call, or sending an image in WhatsApp.
 
-Things you may want to cover:
+## Configure with Your Vonage API Keys
 
-* Ruby version
+To use this sample you will first need a [Vonage account](https://dashboard.nexmo.com/sign-up). Once you have your own API credentials, rename the `.env.example` file to `.env` and set the values as required.
 
-* System dependencies
+For some of the examples you will need to [buy a number](https://dashboard.nexmo.com/buy-numbers).
 
-* Configuration
+## Setup
 
-* Database creation
+```
+$ git clone git@github.com:Vonage-Community/sample-messages-ruby_on_rails-quickstart.git
+$ cd sample-messages-ruby_on_rails-quickstart
+$ cp .env.example .env
+$ bundle install
+$ rails db:create db:migrate
+$ rails s
+```
 
-* Database initialization
+## Tutorials & Sample Code
 
-* How to run the test suite
+### SMS
 
-* Services (job queues, cache servers, search engines, etc.)
+Tutorial                                                                                                                                                        | Code Sample
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
+[How to Send SMS Messages with Ruby on Rails](#)                            | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
+[How to receive an SMS Delivery Receipt with Ruby on Rails](#) | [sms_delivery_receipts_controller.rb](app/controllers/sms_delivery_receipts_controller.rb)
+[How to Receive SMS Messages with Ruby on Rails](#)                      | [inbound_sms_controller.rb](app/controllers/inbound_sms_controller.rb)
 
-* Deployment instructions
+### Voice
 
-* ...
+Tutorial                                                                                                                                                           | Code Sample
+------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------
+[How to Make an Outbound Text-to-Speech Phone Call with Rails](#)   | [outbound_calls_controller.rb](app/controllers/outbound_calls_controller.rb)
+[How to receive an Call Event webhook with Ruby on Rails](#) | [call_events_controller.rb](app/controllers/call_events_controller.rb)
+[How to Handle Inbound Phone Calls with Ruby on Rails](#)         | [inbound_calls_controller.rb](app/controllers/inbound_calls_controller.rb)
+
+## Request More Examples
+
+For help with the code or to request an example not listed here, please join the [Vonage Community Slack](https://developer.vonage.com/en/community/slack). Feedback and requests are highly appreciated!
+
+## Licenses
+
+- The code samples in this repo is under [MIT](LICENSE)
+
+- The tutorials contents are under Creative Commons, [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+
+  ​

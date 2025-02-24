@@ -11,7 +11,6 @@ class InboundCallsController < ApplicationController
           from: params[:from]
         )
 
-    # Return a message to play back to the caller
     render json: [
       {
         action: 'talk',
