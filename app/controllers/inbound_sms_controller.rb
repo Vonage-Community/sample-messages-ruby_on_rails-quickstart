@@ -47,9 +47,9 @@ class InboundSmsController < ApplicationController
   # for simplicity we're not storing this one in the database
   def reply sms
     consonants = sms.text.delete("aeiouAEIOU")
-    binaray = sms.text.to_s(2)
+    binary = sms.text.unpack1('B*')
 
-    message = Vonage::Messaging::Message.sms(message: "Your message with vowels is #{consonants} and your message in binary is #{binaray}")
+    message = Vonage::Messaging::Message.sms(message: "Your message without vowels is #{consonants} and your message in binary is #{binary}")
 
     vonage.messaging.send(
       from: sms.to,
