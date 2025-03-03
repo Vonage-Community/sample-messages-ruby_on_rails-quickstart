@@ -37,6 +37,20 @@ Tutorial                                                                        
 [How to receive an Call Event webhook with Ruby on Rails](#) | [call_events_controller.rb](app/controllers/call_events_controller.rb)
 [How to Handle Inbound Phone Calls with Ruby on Rails](#)         | [inbound_calls_controller.rb](app/controllers/inbound_calls_controller.rb)
 
+### RCS
+
+Tutorial                                                                                                                                                        | Code Sample
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
+[How to Send RCS Messages with Ruby on Rails](#)                            | [#](#)
+[How to Receive RCS Messages with Ruby on Rails](#)                            | [#](#)
+
+### WhatsApp
+
+Tutorial                                                                                                                                                        | Code Sample
+--------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
+[How to Send WhatsApp Messages with Ruby on Rails](#)                            | [#](#)
+[How to Receive WhatsApp Messages with Ruby on Rails](#)                            | [#](#)
+
 ## Request More Examples
 
 For help with the code or to request an example not listed here, please join the [Vonage Community Slack](https://developer.vonage.com/en/community/slack). Feedback and requests are highly appreciated!
