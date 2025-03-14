@@ -11,12 +11,12 @@ For some of the examples you will need to [buy a number](https://dashboard.nexmo
 ## Setup
 
 ```
-$ git clone git@github.com:Vonage-Community/sample-messages-ruby_on_rails-quickstart.git
-$ cd sample-messages-ruby_on_rails-quickstart
-$ cp .env.example .env
-$ bundle install
-$ rails db:create db:migrate
-$ rails s
+git clone git@github.com:Vonage-Community/sample-messages-ruby_on_rails-quickstart.git
+cd sample-messages-ruby_on_rails-quickstart
+cp .env.example .env
+bundle install
+rails db:create db:migrate
+rails s
 ```
 
 ## Tutorials & Sample Code
