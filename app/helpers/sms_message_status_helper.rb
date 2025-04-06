@@ -1,0 +1,2 @@
+module SmsMessageStatusHelper
+end
