@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_08_110835) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_08_133421) do
   create_table "calls", force: :cascade do |t|
     t.string "to"
     t.string "from"
     t.text "text"
     t.string "uuid"
     t.string "status"
-    t.boolean "is_inboud"
+    t.boolean "is_inbound"
     t.string "conversation_uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
