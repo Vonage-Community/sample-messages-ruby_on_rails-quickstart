@@ -1,8 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  
+  # Replace with your NGROK URL
+  config.hosts << ENV['VONAGE_SERVER_HOSTNAME']
 
-  config.hosts << "1d3a-77-137-44-66.ngrok-free.app"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Make code changes take effect immediately without server restart.
