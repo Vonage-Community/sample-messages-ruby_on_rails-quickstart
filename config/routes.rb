@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   # For RcsMessageStatus controller, create
   post '/rcs_message_status', to: 'rcs_message_status#create', as: :rcs_message_status
 

@@ -58,6 +58,8 @@ class OutboundRcsController < ApplicationController
       **message
     )
 
+    puts response
+
     if response.http_response.code == '202'
       rcs_message.update(
         message_uuid: response.entity.attributes[:message_uuid]

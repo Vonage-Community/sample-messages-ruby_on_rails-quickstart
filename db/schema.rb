@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_22_133847) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_24_123201) do
   create_table "calls", force: :cascade do |t|
     t.string "to"
     t.string "from"
@@ -33,6 +33,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_22_133847) do
     t.json "reply"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   create_table "sms_messages", force: :cascade do |t|
