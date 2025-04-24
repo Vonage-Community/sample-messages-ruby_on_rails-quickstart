@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # For OutboundRcs controller, new & create
+  get  '/outbound_rcs/new', to: 'outbound_rcs#new',    as: :new_outbound_rcs
+  post '/outbound_rcs',     to: 'outbound_rcs#create', as: :outbound_rcs
   
   # For OutboundSms controller, new & create
   get  '/outbound_sms/new', to: 'outbound_sms#new',    as: :new_outbound_sms
