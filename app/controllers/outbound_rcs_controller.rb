@@ -4,17 +4,16 @@ class OutboundRcsController < ApplicationController
   end
 
   def create
-    custom_message = construct_custom_message(params[:rcs_message][:contentMessage], params[:rcs_message][:suggestions])rcs
+    custom_message = construct_custom_message(params[:rcs_message][:contentMessage], params[:rcs_message][:suggestions])
     @rcs_message = RcsMessage.new(to: safe_params[:to], from: ENV["RCS_SENDER_ID"], message_type: 'custom')
     @rcs_message.custom = custom_message
 
     if @rcs_message.save
       deliver @rcs_message
-      redirect_to :new_outbound_rcs, flash[:notice] => 'RCS Sent'
+      redirect_to :new_outbound_rcs, flash: { notice: 'RCS Sent' }
     else
-
       flash[:alert] = 'Something went wrong'
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -37,29 +36,32 @@ class OutboundRcsController < ApplicationController
   end
 
   def safe_params
-    params.require(:rcs_message).permit(:to, :contentMessage, :suggestions)
+    params.require(:rcs_message).permit(:to)
   end
 
-  def deliver(rcs_message)
-
-    vonage_client = Vonage::Client.new(
+  def vonage 
+    Vonage::Client.new(
       application_id: ENV["VONAGE_APPLICATION_ID"],
       private_key: ENV["VONAGE_PRIVATE_KEY"]
     )
+  end
 
-    message = vonage_client.messaging.rcs(
+  def deliver(rcs_message)
+    message = vonage.messaging.rcs(
       type: rcs_message.message_type,
       message: rcs_message.custom
     )
 
-    vonage_client.messaging.send(
-    from: 'RubyonRailsQuickstart',
-    to: rcs_message.to,
-    **message
-  )
+    response = vonage.messaging.send(
+      from: ENV["RCS_SENDER_ID"],
+      to: rcs_message.to,
+      **message
+    )
 
-    puts "Messages API Response:"
-    puts response
+    if response.http_response.code == '202'
+      rcs_message.update(
+        message_uuid: response.entity.attributes[:message_uuid]
+      )
+    end
   end
-  
 end

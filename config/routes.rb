@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # For RcsMessageStatus controller, create
+  post '/rcs_message_status', to: 'rcs_message_status#create', as: :rcs_message_status
+
+
   # For OutboundRcs controller, new & create
   get  '/outbound_rcs/new', to: 'outbound_rcs#new',    as: :new_outbound_rcs
   post '/outbound_rcs',     to: 'outbound_rcs#create', as: :outbound_rcs
