@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   # For OutboundCall controller, new & create & show
   resources :outbound_calls, only: [:new, :create, :show]
+  resources :call_events, only: [:create]
+  resources :inbound_calls, only: [:create]
 end
