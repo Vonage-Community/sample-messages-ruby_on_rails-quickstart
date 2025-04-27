@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "inbound_calls/create"
   
   # For OutboundSms controller, new & create
   get  '/outbound_sms/new', to: 'outbound_sms#new',    as: :new_outbound_sms
