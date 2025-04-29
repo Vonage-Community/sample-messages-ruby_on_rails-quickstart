@@ -1,0 +1,45 @@
+<div class="rcs-form">
+  <h1>Send an RCS Message</h1>
+
+  <%= form_with model: @rcs_message, url: :outbound_rcs, local: true, id: 'rcs-form' do |f| %>
+    <div class="field">
+      <%= f.label :to, "Recipient's phone number" %>
+      <%= f.text_field :to, placeholder: '+12223334555' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :contentMessage, "Add a Content Message to prompt your user" %>
+      <%= f.text_field :contentMessage, placeholder: 'Which ice-cream flavour do you prefer?', id: 'contentMessage' %>
+    </div>
+
+    <div id="suggestions-container">
+    <div class="field suggestion-field">
+      <%= f.label :suggestions, "Add a suggestion for your user to reply" %>
+      <%= f.text_field :suggestions, multiple: true, name: "rcs_message[suggestions][]", placeholder: "Chocolate" %>
+    </div>
+  </div>
+
+  <button type="button" id="add-suggestion-btn">Add another suggestion</button>
+
+    <div class="actions">
+      <%= f.submit "Send" %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById("suggestions-container");
+    const addBtn = document.getElementById("add-suggestion-btn");
+
+    addBtn.addEventListener("click", function() {
+      const newField = document.createElement("div");
+      newField.className = "field suggestion-field";
+      newField.innerHTML = `
+        <label>Add a suggestion for your user to reply</label>
+        <input type="text" name="rcs_message[suggestions][]" />
+      `;
+      container.appendChild(newField);
+    });
+  });
+</script>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: MyString
+  from: MyString
+  message_uuid: MyString
+  timestamp: MyString
+  message_type: MyString
+  custom: 
+  reply: 
+
+two:
+  to: MyString
+  from: MyString
+  message_uuid: MyString
+  timestamp: MyString
+  message_type: MyString
+  custom: 
+  reply: 
