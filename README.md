@@ -26,7 +26,7 @@ rails s
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
 [How to Send SMS Messages with Ruby on Rails](https://developer.vonage.com/en/blog/send-sms-ruby-on-rails-dr)                            | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
-[How to receive an SMS Delivery Receipt with Ruby on Rails](#) | [sms_delivery_receipts_controller.rb](app/controllers/sms_delivery_receipts_controller.rb)
+[How to receive an SMS Message Status with Ruby on Rails](#) | [sms_delivery_receipts_controller.rb](app/controllers/sms_message_status_controller.rb)
 [How to Receive SMS Messages with Ruby on Rails](https://developer.vonage.com/en/blog/receive-sms-messages-ruby-on-rails-dr)                      | [inbound_sms_controller.rb](app/controllers/inbound_sms_controller.rb)
 
 ### Voice
@@ -41,7 +41,8 @@ Tutorial                                                                        
 
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
-[How to Send RCS Messages with Ruby on Rails](#)                            | [#](#)
+[How to Send RCS Messages with Ruby on Rails](#)                            | [outbound_rcs_controller](app/controllers/outbound_rcs_controller.rb)
+[How to receive an RCS Message Status with Ruby on Rails](#) | [rcs_delivery_receipts_controller.rb](app/controllers/rcs_message_status_controller.rb)
 [How to Receive RCS Messages with Ruby on Rails](#)                            | [#](#)
 
 ### WhatsApp
