@@ -25,9 +25,9 @@ rails s
 
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
-[How to Send SMS Messages with Ruby on Rails](#)                            | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
+[How to Send SMS Messages with Ruby on Rails](https://developer.vonage.com/en/blog/send-sms-ruby-on-rails-dr)                            | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
 [How to receive an SMS Delivery Receipt with Ruby on Rails](#) | [sms_delivery_receipts_controller.rb](app/controllers/sms_delivery_receipts_controller.rb)
-[How to Receive SMS Messages with Ruby on Rails](#)                      | [inbound_sms_controller.rb](app/controllers/inbound_sms_controller.rb)
+[How to Receive SMS Messages with Ruby on Rails](https://developer.vonage.com/en/blog/receive-sms-messages-ruby-on-rails-dr)                      | [inbound_sms_controller.rb](app/controllers/inbound_sms_controller.rb)
 
 ### Voice
 
