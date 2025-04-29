@@ -4,8 +4,8 @@ class OutboundRcsController < ApplicationController
   end
 
   def create
-    custom_message = construct_custom_message(params[:rcs_message][:contentMessage], params[:rcs_message][:suggestions])
     @rcs_message = RcsMessage.new(to: safe_params[:to], from: ENV["RCS_SENDER_ID"], message_type: 'custom')
+    custom_message = construct_custom_message(params[:rcs_message])
     @rcs_message.custom = custom_message
 
     if @rcs_message.save
@@ -19,10 +19,16 @@ class OutboundRcsController < ApplicationController
 
   private
 
-  def construct_custom_message(contentMessage, suggestions)
+  def safe_params
+    params.require(:rcs_message).permit(:to)
+  end
+
+  def construct_custom_message(rcs_message_params)
+    content_message = rcs_message_params[:contentMessage]
+    suggestions = rcs_message_params[:suggestions]
     {
       contentMessage: {
-        text: contentMessage,
+        text: content_message,
         suggestions: Array(suggestions).reject(&:blank?).each_with_index.map do |suggestion, idx|
           {
             reply: {
@@ -33,10 +39,6 @@ class OutboundRcsController < ApplicationController
         end
       }
     }
-  end
-
-  def safe_params
-    params.require(:rcs_message).permit(:to)
   end
 
   def vonage 
