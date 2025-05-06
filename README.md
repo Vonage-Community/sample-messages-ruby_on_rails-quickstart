@@ -41,9 +41,9 @@ Tutorial                                                                        
 
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
-[How to Send RCS Suggested Reply Messages with Ruby on Rails](#)                            | [outbound_rcs_controller](app/controllers/outbound_rcs_controller.rb)
+[How to Send RCS Suggested Reply Messages with Ruby on Rails](#)                            | [outbound_rcs_controller.rb](app/controllers/outbound_rcs_controller.rb)
 [Receive an RCS Message Status with Ruby on Rails](#) | [rcs_message_status_controller.rb](app/controllers/rcs_message_status_controller.rb)
-[How to Receive RCS Reply Messages with Ruby on Rails](#)                            | [inbound_rcs_controller](app/controllers/inbound_rcs_controller.rb)
+[How to Receive RCS Reply Messages with Ruby on Rails](#)                            | [inbound_rcs_controller.rb](app/controllers/inbound_rcs_controller.rb)
 
 ### WhatsApp
 
