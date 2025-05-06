@@ -1,0 +1,2 @@
+module InboundRcsHelper
+end
