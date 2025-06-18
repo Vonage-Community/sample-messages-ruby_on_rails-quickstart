@@ -8,7 +8,7 @@ class OutboundCallsController < ApplicationController
 
     if @call.save
       make_call(@call)
-      redirect_to new_outbound_call_path, notice: 'Call initiated'
+      redirect_to new_outbound_call_url, notice: 'Call initiated'
     else
       flash[:alert] = 'Something went wrong'
       render :new
