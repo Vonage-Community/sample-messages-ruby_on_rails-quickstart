@@ -4,12 +4,12 @@
   <%= form_with model: @call, url: outbound_calls_path, local: true do |f| %>
     <div class="field">
       <%= f.label :from, "Your phone number to make the call from" %>
-      <%= f.text_field :from, placeholder: '+12223334555' %>
+      <%= f.text_field :from, placeholder: '12223334555' %>
     </div>
 
     <div class="field">
       <%= f.label :to, "Recipient's phone number" %>
-      <%= f.text_field :to, placeholder: '+12223334555' %>
+      <%= f.text_field :to, placeholder: '12223334555' %>
     </div>
 
     <div class="field">
