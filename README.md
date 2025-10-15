@@ -49,7 +49,7 @@ Tutorial                                                                        
 
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
-[How to Send WhatsApp Messages with Ruby on Rails](#)                            | [outbound_whatspaa_controller.rb](app/controllers/outbound_whatsapp_controller.rb)
+[How to Send WhatsApp Messages with Ruby on Rails](#)                            | [outbound_whatsapp_controller.rb](app/controllers/outbound_whatsapp_controller.rb)
 [How to Receive WhatsApp Messages with Ruby on Rails](#)                            | [#](#)
 
 ## Request More Examples
