@@ -29,4 +29,9 @@ Rails.application.routes.draw do
   
   # For InboundCalls controller, create
   resources :inbound_calls, only: [:create]
+
+  # For OutboundWhatsapp controller, new & create & interactive
+  get  '/outbound_whatsapp/new', to: 'outbound_whatsapp#new', as: :new_outbound_whatsapp
+  post '/outbound_whatsapp',     to: 'outbound_whatsapp#create', as: :outbound_whatsapp
+  post '/outbound_whatsapp/interactive', to: 'outbound_whatsapp#interactive', as: :interactive_whatsapp
 end
