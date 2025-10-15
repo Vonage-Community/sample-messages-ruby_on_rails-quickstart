@@ -1,0 +1,39 @@
+<div class="whatsapp-form">
+  <h1>Send a WhatsApp Message</h1>
+
+  <%= form_for @whatsapp_message, url: outbound_whatsapp_path do |f| %>
+    <div class="field">
+      <%= f.label :from, "From (Your WhatsApp Number)" %>
+      <%= f.text_field :from, value: ENV['VONAGE_WHATSAPP_NUMBER'], placeholder: '+14157386102' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :to, "To (Recipient WhatsApp Number)" %>
+      <%= f.text_field :to, placeholder: '+14155551234' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :text, "Message" %>
+      <%= f.text_area :text, rows: 4, placeholder: "Type your message..." %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send Message" %>
+    </div>
+  <% end %>
+
+  <hr>
+  <h3>Try an Interactive Message</h3>
+  <p>Send a sample interactive WhatsApp message with reply buttons.</p>
+
+  <%= form_with url: interactive_whatsapp_path, method: :post, local: true do |f| %>
+    <div class="field">
+      <%= f.label :to, "To (Recipient WhatsApp Number)" %>
+      <%= f.text_field :to, placeholder: '+14155551234', required: true %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit "Send Interactive Message" %>
+    </div>
+  <% end %>
+</div>

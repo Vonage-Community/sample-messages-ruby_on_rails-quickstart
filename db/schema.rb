@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_24_123201) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_15_112429) do
   create_table "calls", force: :cascade do |t|
     t.string "to"
     t.string "from"
@@ -37,6 +37,17 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_24_123201) do
   end
 
   create_table "sms_messages", force: :cascade do |t|
+    t.string "to"
+    t.string "from"
+    t.text "text"
+    t.string "status"
+    t.string "message_uuid"
+    t.boolean "is_inbound"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "whatsapp_messages", force: :cascade do |t|
     t.string "to"
     t.string "from"
     t.text "text"
