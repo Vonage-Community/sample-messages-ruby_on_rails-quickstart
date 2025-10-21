@@ -1,0 +1,245 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* Messages container */
+.messages-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.messages-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header with Vonage brand gradient */
+.messages-header {
+  background: linear-gradient(135deg, #871FFF 0%, #FFA68C 100%);
+  padding: 20px 24px;
+  color: white;
+}
+
+.messages-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.messages-header h1 svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.messages-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Message items */
+.message-item {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.2s;
+}
+
+.message-item:hover {
+  background-color: #fafafa;
+}
+
+.message-item:last-child {
+  border-bottom: none;
+}
+
+/* Message content layout */
+.message-content {
+  display: flex;
+  gap: 16px;
+}
+
+/* Avatar with Vonage gradient */
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #871FFF 0%, #FFA68C 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Message body */
+.message-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 16px;
+}
+
+.message-sender {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.message-sender-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 15px;
+}
+
+.message-sender-phone {
+  color: #666;
+  font-size: 13px;
+}
+
+.message-time {
+  color: #999;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Message text */
+.message-text {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Button reply styling */
+.message-reply {
+  display: inline-flex;
+  padding: 10px 14px;
+  background-color: #F5EBFF;
+  border: 1px solid #871FFF;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.message-reply-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message-reply-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #871FFF;
+  text-transform: uppercase;
+}
+
+.message-reply-text {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.message-reply-id {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  color: #666;
+}
+
+/* Other message types */
+.message-other {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.message-other-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.message-other-text {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Message metadata */
+.message-metadata {
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+  color: #999;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Empty state */
+.messages-empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: #666;
+}
+
+.messages-empty h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.messages-empty p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Footer */
+.messages-footer {
+  padding: 16px 24px;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.messages-footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.messages-footer a {
+  color: #871FFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.messages-footer a:hover {
+  text-decoration: underline;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_15_112429) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_21_131458) do
   create_table "calls", force: :cascade do |t|
     t.string "to"
     t.string "from"
@@ -56,5 +56,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_15_112429) do
     t.boolean "is_inbound"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "message_type"
+    t.string "profile_name"
+    t.text "reply_data"
   end
 end

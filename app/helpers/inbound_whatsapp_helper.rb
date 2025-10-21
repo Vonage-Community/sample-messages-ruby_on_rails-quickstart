@@ -1,0 +1,2 @@
+module InboundWhatsappHelper
+end

@@ -1,0 +1,10 @@
+<div class="readme-container">
+  <div class="readme-content markdown-body">
+    <% if @readme_content.present? %>
+      <%= markdown_to_html(@readme_content) %>
+    <% else %>
+      <h1>Welcome to Vonage APIs Quickstart</h1>
+      <p>README.md not found.</p>
+    <% end %>
+  </div>
+</div>
