@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "inbound_rcs/create"
+  # Root path - displays README
+  root 'home#index'
   
   # For RcsMessageStatus controller, create
   post '/rcs_message_status', to: 'rcs_message_status#create', as: :rcs_message_status
@@ -34,4 +35,9 @@ Rails.application.routes.draw do
   get  '/outbound_whatsapp/new', to: 'outbound_whatsapp#new', as: :new_outbound_whatsapp
   post '/outbound_whatsapp',     to: 'outbound_whatsapp#create', as: :outbound_whatsapp
   post '/outbound_whatsapp/interactive', to: 'outbound_whatsapp#interactive', as: :interactive_whatsapp
+
+  # Routes for InboundWhatsapp controller, inbound and status webhooks and displaying the index
+  get  '/messages', to: 'inbound_whatsapp#index', as: :messages
+  post '/inbound_whatsapp/inbound', to: 'inbound_whatsapp#inbound'
+  post '/inbound_whatsapp/status',  to: 'inbound_whatsapp#status'
 end

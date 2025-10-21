@@ -1,0 +1,313 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* Messages container */
+.messages-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.messages-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.messages-header {
+  background: linear-gradient(135deg, #871FFF 0%, #FFA68C 100%);
+  padding: 20px 24px;
+  color: white;
+}
+
+.messages-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.messages-header h1 svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.messages-header p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Message list */
+.messages-list {
+  border-top: 1px solid #e5e5e5;
+}
+
+.message-item {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.2s;
+}
+
+.message-item:hover {
+  background-color: #fafafa;
+}
+
+.message-item:last-child {
+  border-bottom: none;
+}
+
+.message-content {
+  display: flex;
+  gap: 16px;
+}
+
+/* Avatar */
+.message-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #871FFF 0%, #FFA68C 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Message body */
+.message-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.message-sender {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.message-sender-name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #000;
+  font-size: 14px;
+}
+
+.message-sender-phone {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  color: #666;
+  font-size: 12px;
+}
+
+.message-time {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Message text */
+.message-text {
+  margin: 12px 0;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Button reply styling */
+.message-reply {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #F5EBFF;
+  border: 1px solid #871FFF;
+  border-radius: 6px;
+  gap: 8px;
+}
+
+.message-reply svg {
+  width: 16px;
+  height: 16px;
+  color: #871FFF;
+  flex-shrink: 0;
+}
+
+.message-reply-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.message-reply-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #871FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.message-reply-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+.message-reply-id {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 300;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* Other message type */
+.message-other {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  gap: 8px;
+}
+
+.message-other svg {
+  width: 16px;
+  height: 16px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.message-other-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.message-other-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
+}
+
+/* Metadata */
+.message-metadata {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  font-weight: 300;
+  color: #999;
+}
+
+.message-metadata-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.message-metadata-item svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Empty state */
+.messages-empty {
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.messages-empty svg {
+  width: 48px;
+  height: 48px;
+  color: #ccc;
+  margin: 0 auto 12px;
+}
+
+.messages-empty h3 {
+  margin: 0 0 8px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.messages-empty p {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+}
+
+/* Footer */
+.messages-footer {
+  background-color: #fafafa;
+  padding: 12px 24px;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.messages-footer p {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 300;
+  color: #666;
+}
+
+.messages-footer a {
+  color: #871FFF;
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+.messages-footer a:hover {
+  text-decoration: underline;
+}
