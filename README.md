@@ -10,6 +10,7 @@ For some of the examples you will need to [buy a number](https://dashboard.nexmo
 
 ## Setup
 <br>
+
 ```
 git clone git@github.com:Vonage-Community/sample-messages-ruby_on_rails-quickstart.git
 cd sample-messages-ruby_on_rails-quickstart
@@ -18,9 +19,12 @@ bundle install
 rails db:create db:migrate
 rails s
 ```
+
 ## Tutorials & Sample Code
+
 ### SMS
 <br>
+
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
 [How to Send SMS Messages with Ruby on Rails](https://developer.vonage.com/en/blog/send-sms-ruby-on-rails-dr)                            | [outbound_sms_controller.rb](app/controllers/outbound_sms_controller.rb)
@@ -29,6 +33,7 @@ Tutorial                                                                        
 
 ### Voice
 <br>
+
 Tutorial                                                                                                                                                           | Code Sample
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------
 [How to Make an Outbound Text-to-Speech Phone Call with Rails](#)   | [outbound_calls_controller.rb](app/controllers/outbound_calls_controller.rb)
@@ -37,6 +42,7 @@ Tutorial                                                                        
 
 ### RCS
 <br>
+
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
 [How to Send RCS Suggested Reply Messages with Ruby on Rails](#)                            | [outbound_rcs_controller.rb](app/controllers/outbound_rcs_controller.rb)
@@ -48,14 +54,16 @@ Tutorial                                                                        
 Tutorial                                                                                                                                                        | Code Sample
 --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------
 [How to Send WhatsApp Messages with Ruby on Rails](#)                            | [outbound_whatsapp_controller.rb](app/controllers/outbound_whatsapp_controller.rb)
-[How to Receive WhatsApp Messages with Ruby on Rails](#)                            | [inbound_whatsapp_controller.rb](app/controllers/inbound_whatsapp_controller.rb)
+[How to Receive WhatsApp Messages with Ruby on Rails](#)                            | [outbound_whatsapp_controller.rb](app/controllers/outbound_whatsapp_controller.rb)
 
 ## Request More Examples
 <br>
+
 For help with the code or to request an example not listed here, please join the [Vonage Community Slack](https://developer.vonage.com/en/community/slack). Feedback and requests are highly appreciated!
 
 ## Licenses
 <br>
+
 - The code samples in this repo is under [MIT](LICENSE)
 
 - The tutorials contents are under Creative Commons, [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
