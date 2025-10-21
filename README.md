@@ -1,12 +1,14 @@
 # Vonage APIs Quickstart Examples for Ruby on Rails
 <br>
+
 The purpose of the quickstart guide is to provide simple examples focused on one goal. For example, sending an SMS, making a Text to Speech call, or sending an image in WhatsApp.
 
 ## Configure with Your Vonage API Keys
 <br>
-To use this sample you will first need a [Vonage account](https://dashboard.nexmo.com/sign-up). Once you have your own API credentials, rename the `.env.example` file to `.env` and set the values as required.
 
-For some of the examples you will need to [buy a number](https://dashboard.nexmo.com/buy-numbers).
+To use this sample you will first need a [Vonage account](https://dashboard.vonage.com/sign-up). Once you have your own API credentials, rename the `.env.example` file to `.env` and set the values as required.
+
+For some of the examples you will need to [buy a number](https://dashboard.vonage.com/buy-numbers).
 
 ## Setup
 <br>
