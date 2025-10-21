@@ -1,7 +1,7 @@
 # Vonage APIs Quickstart Examples for Ruby on Rails
 <br>
 
-The purpose of the quickstart guide is to provide simple examples focused on one goal. For example, sending an SMS, making a Text to Speech call, or sending an image in WhatsApp.
+The purpose of the quickstart guide is to provide simple examples, each focused on one goal. For example, sending an SMS, making a Text to Speech call, or sending an image in WhatsApp. All using Vonage APIs.
 
 ## Configure with Your Vonage API Keys
 <br>
