@@ -1,5 +1,5 @@
 class InboundWhatsappController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token, only: [:inbound, :status]
 
   def index
     @messages = WhatsappMessage.where(is_inbound: true).order(created_at: :desc)
